@@ -1,0 +1,57 @@
+:root,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+
+  color-scheme: light dark;
+  --main-color: #213547;
+  --bg-color: #ffffff;
+  --acccent-color: #6cb8d6;
+  --button-text-color: #a1a1a1;
+
+  --content-color: #ffffffcb;
+  --border-color: #646cffaa;
+  --action-color: #61dafbaa;
+
+  color: var(--main-color);
+  background-color: var(--bg-color);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 100vw;
+}
+
+button {
+  cursor: pointer;
+  appearance: none;
+  border-radius: 16px;
+  background-color: var(--content-color);
+  color: var(--button-text-color);
+  padding: 8px 32px;
+
+  font-size: 12px;
+  font-weight: 300;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-color: #ffffff;
+    --bg-color: #213547;
+    --button-text-color: #bbbbbb;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
